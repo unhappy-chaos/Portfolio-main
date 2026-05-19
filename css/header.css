@@ -1,0 +1,139 @@
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--sec-light-color);
+  justify-content: center;
+  align-items: center;
+  padding: 25px 15px 20px 15px;
+}
+
+#theme {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+  gap: 5px;
+  transition: 0.7s;
+  position: relative;
+}
+
+#theme::before {
+  content: "";
+  position: absolute;
+  height: 2.5px;
+  background-color: var(--blue-themed);
+  width: 0%;
+  transition: 0.5s;
+  bottom: 0;
+  left: 0;
+}
+
+#theme:hover::before {
+  width: 100%;
+  transition: 0.7s;
+}
+
+/* Começo do botão toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--sec-light-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--main-light-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--blue-themed);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/* Final do botão toggle */
+
+#theme_text {
+  font-size: 1.1rem;
+  color: var(--dark-themed);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px;
+  border: 1px solid var(--main-dark-color);
+  box-shadow: 1.5px 1.5px 3.5px var(--main-dark-color);
+  border-radius: 30px;
+  width: 35%;
+  gap: 10px;
+  background-color: var(--main-light-color);
+}
+
+.line {
+  position: relative;
+}
+
+.nav_text {
+  color: var(--sec-light-color);
+}
+
+#translate {
+  display: none;
+  min-width: 100px;
+  border: 3px solid var(--main-dark-color);
+  border-radius: 35px;
+  padding: 15px;
+  font-weight: bold;
+  background-color: var(--main-light-color);
+  animation: blinker 2.5s infinite;
+  cursor: pointer;
+}
+
+/* @media (max-width: 430px) {
+    header {
+        width: fit-content;
+    } 
+    nav {
+        width: 55%;
+        gap: 15px;
+    }
+  } */

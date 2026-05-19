@@ -1,0 +1,12 @@
+Primeiramente, eu estou entregando esse aqui de casa, portanto ele não vai possuir os arquivos do github desktop que fizemos em sala.
+
+Ponto em que se encontra o portfólio: Apesar dos atrasos e distrações em sala, seus materiais foram de grande ajuda para adição de todos fundamentos que estão aplicados
+ na base do portfólio ainda incompleto.
+
+Acredito que a falta de conteúdo a apresentar pelas páginas se dá pela troca de decisões em meio ao projeto, sendo que na primeira
+ parte eu foquei em priorizar o visual e quantia do site e em segundo [ Praticamente ao refazr ele ]
+ em aplicar seus ensinamentos diretamente e explicar cada um deles via comentando o código.
+  
+Começando pela estrutura de organização do site onde a nomenclatura está de acordo e também a divisão de arquivos, o conteúdo em
+ si do site foi reutilizado de um projeto antigom, portanto não ligue para as escritas :v
+

@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2? family= Kanit & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 10px;
+    flex: 1;
+} /* Joga o Footer para baixo tornando o conteúdo do main algo a preencher a tela o suficiente  */
+
+/* Váriaveis de cor para aplicação posterior */
+:root {
+    --main-font: 'Kanit', sans-serif;
+    --main-light-color: #f0ffff;
+    --sec-light-color: #696969;
+    --main-dark-color: #000000;
+    --sec-dark-color: #e0e0e0;
+    --orange-themed: #ff6600;
+    --yellow-themed: #e9e930;
+    --green-themed: #9acd32;
+    --aqua-thmed: #2bdfdf;
+    --purple-themed: #551a8b;
+    --blue-themed: #007BFF;
+    --dark-themed: #23252b;
+    --titles-one: 4em;
+    --titles-too: 3em;
+    --titles-three: 2em;
+    --normal-text: 1em;
+    --main-listyle: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-light-color);
+    font-family: var(--main-font);
+    font-size: var(--normal-text);
+    min-height: 100vh;
+    color: var(--main-dark-color);
+    font-weight: 650;
+}
+
+#main_title {
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: var(--blue-themed);
+    border-radius: 20px;
+    color: var(--dark-themed);
+} /* Colocar para a cor mudar lentamente a cada página. */
+
+/* Estilização de fontes para textos e listas */
+h1 {
+    font-family: 'Mukta', sans-serif;
+    font-size: var(--titles-one);
+}
+
+h2 {
+    font-size: var(--titles-too);
+    font-family: 'Mukta', sans-serif;
+}
+
+h3 {
+    font-size: var(--titles-three);
+}
+
+p {
+    font-size: var(--normal-text);
+    color: var(--main-dark-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--sec-dark-color);
+}
+
+li {
+    list-style: var(--main-listyle); /* Remove a estilização padrão do CSS para listas */
+}
+
+/* CSS da página de projetos. */
+#main_slide {
+    overflow: hidden;
+    width: 100%;
+    height: 63.5vh;
+}
+
+#projects {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    animation: animacao 20s infinite;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid var(--main-dark-color);
+    border-bottom: 2px solid var(--main-dark-color);
+    border-right: 6px dashed var(--dark-themed);
+    border-left: 6px dashed var(--dark-themed);
+    gap: 20px;
+    width: 20%;
+}
+
+.slide img {
+    max-width: 27.5em;
+    max-height: 15em;
+}
+
+@keyframes animacao {
+    0% {
+        margin-left: 0%;
+    }
+    20% {
+        margin-left: 0%;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    95% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: -400%;
+    }
+} /* Animação do carrosel */
+
+/* ---------------------------------- */
+
+#main_section {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+#main_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    gap: 30px;
+}
+
+#main_graph {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 85%;
+    background-color: var(--sec-dark-color);
+    padding: 10px;
+    box-shadow: 5px 5px 4.5px var(--main-dark-color);
+    border-top: 1.5px solid var(--dark-themed);
+    border-left: 1.5px solid var(--dark-themed);
+    border-radius: 15px;
+    gap: 15px;
+}
+
+#main_graph li {
+    width: 100%;
+}
+
+#main_skills {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#main_write {
+    width: fit-content;
+    text-decoration: underline;
+    text-decoration-color: var(--dark-themed);
+}
+
+.main_text {
+    border-left: 3px double var(--sec-light-color);
+    padding: 30px 0px 30px 20px;
+    width: 75%;
+    transition: 3s;
+    color: var(--sec-light-color);
+}
+
+#main_img {
+    display: inline-block;
+    width: 30%;
+    height: 17.5em;
+    position: relative;
+}
+
+#main_img img {
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+}
+
+#subtitle {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-color: var(--sec-light-color);
+    bottom: 15px;
+    opacity: 0;
+    font-style: italic;
+    transition: 1s;
+}
+
+#main_img:hover figcaption {
+    opacity: 1;
+}
+
+/* Menu de navegação: [ Sobre mim, Projetos, Habilidades ] */
+
+.line::before,
+.line::after {
+    content: "";
+    position: absolute;
+    height: 2.5px;
+    background-color: var(--blue-themed);
+    width: 0;
+    transition: 0.5s;
+}
+
+.line::before {
+    bottom: -3px;
+    left: 0;
+}
+
+.line::after {
+    bottom: -3px;
+    right: 0;
+}
+
+.line:hover::before,
+.line:hover::after {
+    width: 100%;
+}
+
+
+.side::before {
+    content: "";
+    position: absolute;
+    width: 2.5px;
+    background-color: var(--blue-themed);
+    height: 0%;
+    transition: 0.5s;
+    bottom: 0;
+    left: 0;
+}
+
+.side:hover::before {
+    height: 100%;
+    transition: 0.7s;
+}
+
+.side::after {
+    content: "";
+    position: absolute;
+    width: 2.5px;
+    background-color: var(--blue-themed);
+    height: 0%;
+    transition: 0.5s;
+    top: 0;
+    right: 0;
+}
+
+.side:hover::after {
+    height: 100%;
+    transition: 0.7s;
+}
+
+
+.typado {
+    display: inline;
+}
+
+@keyframes blinker {
+    0% {
+    border: 3px solid transparent;
+}
+    50% {
+    border: 3px solid var(--main-dark-color);
+}
+    100% {
+    border: 3px solid transparent;
+}
+} /* ??? */
+
+/* CSS da página das Skills */
+
+.status_bar {
+    display: block;
+    height: 8px;
+    border: 1px solid rgb(0, 255, 136); /* Testar cores para melhor exposição */
+}
+
+.status_bar.html {
+    background-color: var(--orange-themed);
+    animation: html 2.5s ease-in-out 2s 1 both;
+}
+.status_bar.css {
+    background-color: var(--blue-themed);
+    animation: css 2.5s ease-in-out 2s 1 both;
+}
+.status_bar.js {
+    background-color: var(--yellow-themed);
+    animation: js 2.5s ease-in-out 2s 1 both;
+}
+.status_bar.node {
+    background-color: var(--green-themed);
+    animation: node 2.5s ease-in-out 2s 1 both;
+}
+.status_bar.react {
+    background-color: var(--aqua-thmed);
+    animation: react 2.5s ease-in-out 2s 1 both;
+}
+
+@keyframes html {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 90%;
+    }
+}
+@keyframes css {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 85%;
+    }
+}
+@keyframes js {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 70%;
+    }
+}
+@keyframes node {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 50%;
+    }
+}
+@keyframes react {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 65%;
+    }
+}
+
