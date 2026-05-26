@@ -8,39 +8,25 @@ footer {
   padding: 20px 15px 15px 15px;
 }
 
-#linkedin, #github {
+.sociais {
   display: flex;
   flex-direction: column;
-  border-bottom: 2.5px solid var(--blue-themed);
   gap: 2.5px;
   align-items: center;
   transition: 0.3s;
 }
 
-#linkedin p, #github p {
+.sociais p {
   color: var(--dark-themed);
+  border-bottom: 2.5px solid var(--blue-themed);
 }
 
-#linkedin:hover, #github:hover {
+.sociais:hover {
   gap: 15px;
 }
 
-#linkedin img, #github img {
+.sociais img {
   height: 45px;
-}
-
-#content_footer {
-  display: flex;
-  width: fit-content;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 45px;
-  opacity: 35%;
-  transition: 1s;
-}
-
-#content_footer:hover {
-  opacity: 100%;
 }
 
 #about_block, #projects_block, #skills_block {

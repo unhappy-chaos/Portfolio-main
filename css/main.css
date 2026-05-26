@@ -9,7 +9,7 @@
 main {
     padding: 10px;
     flex: 1;
-} /* Joga o Footer para baixo tornando o conteúdo do main algo a preencher a tela o suficiente  */
+} /* Joga o Footer para baixo tornando o conteúdo do main algo a preencher a tela o suficiente */
 
 /* Váriaveis de cor para aplicação posterior */
 :root {
@@ -50,7 +50,27 @@ body {
     background-color: var(--blue-themed);
     border-radius: 20px;
     color: var(--dark-themed);
-} /* Colocar para a cor mudar lentamente a cada página. */
+} /* Colocar para a cor mudar lentamente a cada página */
+
+#main_section {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+#main_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    gap: 30px;
+}
+
+#typado {
+    display: inline;
+    
+} /* Escrita selecionada do JavaScript para rodar a lib Typed.JS *
 
 /* Estilização de fontes para textos e listas */
 h1 {
@@ -145,21 +165,6 @@ li {
 
 /* ---------------------------------- */
 
-#main_section {
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-}
-
-#main_div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: fit-content;
-    height: fit-content;
-    gap: 30px;
-}
-
 #main_graph {
     display: flex;
     flex-direction: column;
@@ -182,12 +187,6 @@ li {
     display: flex;
     flex-direction: column;
     width: 50%;
-}
-
-#main_write {
-    width: fit-content;
-    text-decoration: underline;
-    text-decoration-color: var(--dark-themed);
 }
 
 .main_text {
@@ -284,11 +283,6 @@ li {
 .side:hover::after {
     height: 100%;
     transition: 0.7s;
-}
-
-
-.typado {
-    display: inline;
 }
 
 @keyframes blinker {
